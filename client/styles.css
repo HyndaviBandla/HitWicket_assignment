@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+#game-container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#current-player {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Game Board Styles */
+#game-board {
+  display: grid;
+  grid-template-rows: repeat(5, 80px);
+  grid-template-columns: repeat(5, 80px);
+  gap: 2px;
+  background-color: #333;
+  border: 2px solid #333;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+}
+
+.cell[data-highlight="true"] {
+  background-color: #90ee90; /* Light green for highlighting */
+}
+
+.highlight {
+  background-color: #90ee90; /* Alternative highlighting */
+}
+#move-history-container {
+  margin-top: 20px;
+  color: rgb(242, 85, 6);
+}
+
+#move-history {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#move-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#move-history li {
+  margin-bottom: 5px;
+}
+
+
+
+
+#chat-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#chat-box {
+  height: 150px;
+  overflow-y: auto;
+  background-color: #444;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+#chat-input {
+  width: 70%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 5px;
+}
+
+#chat-send {
+  width: 25%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+}
+
+/* Piece Styles */
+.piece {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+.piece.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.playerA {
+  background-color: #add8e6; /* Light blue */
+}
+
+.playerB {
+  background-color: #ffcccb; /* Light red */
+}
+
+
+#game-container {
+  position: relative;
+  width: 80%; /* Adjust as needed */
+  margin: 0 auto;
+  padding-top: 50px; /* Adjust as needed to ensure space for ratings */
+}
+
+#ratings {
+  position: absolute;
+  top: 50px;
+  right: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; /* Align content to the right */
+}
+
+.player-rating {
+  margin-right: 20px; /* Add space between player ratings */
+}
+
+.stars {
+  display: flex;
+  justify-content: flex-end; /* Align stars to the right */
+}
+
+.star {
+  font-size: 24px;
+  color: #ddd; /* Default color for unfilled stars */
+}
+
+.star.filled {
+  color: #FFD700; /* Gold color for filled stars */
+}
